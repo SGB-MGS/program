@@ -5,8 +5,8 @@
 #define switch 2
 void init()
 {
-    wiringPiSetup()
-    pinMode(green,OUTPU);
+    wiringPiSetup();
+    pinMode(green,OUTPUT);
     pinMode(red,OUTPUT);
     pinMode(switch,INPUT);
 }
