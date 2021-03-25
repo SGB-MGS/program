@@ -17,6 +17,7 @@ void led(int signal)
     {
         digitalWrite(green,LOW);
         digitalWrite(red,HIGH);
+        prinf("关");
     }
     else
     {
@@ -24,6 +25,7 @@ void led(int signal)
         {
             digitalWrite(green,HIGH);
             digitalWrite(red,LOW);
+            prinf("开");
         }
     }
 }
