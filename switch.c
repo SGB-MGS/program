@@ -13,8 +13,19 @@ void init()
 
 void led(int signal)
 {
-    digitalWrite(green,HIGH);
-    digitalWrite(red,LOW);
+    if(0==signal)
+    {
+        digitalWrite(green,LOW);
+        digitalWrite(red,HIGH);
+    }
+    else
+    {
+        if(1==signal)
+        {
+            digitalWrite(green,HIGH);
+            digitalWrite(red,LOW);
+        }
+    }
 }
 
 void main()
@@ -24,7 +35,7 @@ void main()
     {
         if(0==digitalRead(switch))
         {
-            delay(500);
+            delay(10);
         }
     }
 }
