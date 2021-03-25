@@ -7,7 +7,7 @@ void* fun1(void* arg)
     char* name=(char*)arg;
     for(a=0;a<50;a++)
     {
-        printf("%s:%d",arg,a);
+        printf("%s:%d\n",arg,a);
     }
 }
 void main(void)
