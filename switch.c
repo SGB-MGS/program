@@ -38,6 +38,21 @@ void main()
         if(0==digitalRead(switch))
         {
             delay(10);
+            if(0==digitalRead(switch))
+            {
+                led(0);
+            }
+        }
+        else
+        {
+            if(1==digitalRead(switch))
+            {
+                delay(10);
+                if(1==digitalRead(switch))
+                {
+                    led(1);
+                }
+            }
         }
     }
 }
