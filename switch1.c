@@ -29,6 +29,7 @@ void main(void)
         {
             case 0:led(0);printf("挡\n");break;
             case 1:led(1);printf("不挡\n");break;
+            default:printf("error");
         }
     }
 }
