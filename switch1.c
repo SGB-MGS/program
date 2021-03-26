@@ -8,26 +8,15 @@ void init()
     wiringPiSetup();
     pinMode(green,OUTPUT);
     pinMode(red,OUTPUT);
-    pinMode(switch,INPUT);
+       pinMode(switch,INPUT);
 }
 void led(int signal)
 {
-    if(0==signal)
+    switch(signal)
     {
-        digitalWrite(green,LOW);
-        digitalWrite(red,HIGH);
-    }
-    else
-    {
-        if(1==signal)
-        {
-            digitalWrite(green,HIGH);
-            digitalWrite(red,LOW);
-        }
-        else
-        {
-            printf("error");
-        }
+        case 0:digitalWrite(red,HIGH);digitalWrite(green,LOW);break;
+        case 1:digitalWrite(green,HIGH);digitalWrite(red,LOW);break;
+        default:printf("error");
     }
 }
 

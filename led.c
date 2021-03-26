@@ -2,21 +2,10 @@
 #define red 1
 void led(int signal)
 {
-    if(0==signal)
+    switch(signal)
     {
-        digitalWrite(green,LOW);
-        digitalWrite(red,HIGH);
-    }
-    else
-    {
-        if(1==signal)
-        {
-            digitalWrite(green,HIGH);
-            digitalWrite(red,LOW);
-        }
-        else
-        {
-            printf("error");
-        }
+        case 0:digitalWrite(red,HIGH);digitalWrite(green,LOW);break;
+        case 1:digitalWrite(green,HIGH);digitalWrite(red,LOW);break;
+        default:printf("error");
     }
 }
