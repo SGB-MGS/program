@@ -17,7 +17,6 @@ void led(int signal)
     {
         digitalWrite(green,LOW);
         digitalWrite(red,HIGH);
-        printf("关");
     }
     else
     {
@@ -25,7 +24,6 @@ void led(int signal)
         {
             digitalWrite(green,HIGH);
             digitalWrite(red,LOW);
-            printf("开");
         }
     }
 }
@@ -41,6 +39,7 @@ void main()
             if(0==digitalRead(switch))
             {
                 led(0);
+                printf("关");
             }
         }
         else
@@ -51,6 +50,7 @@ void main()
                 if(1==digitalRead(switch))
                 {
                     led(1);
+                    printf("开");
                 }
             }
         }
