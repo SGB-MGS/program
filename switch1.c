@@ -2,13 +2,13 @@
 #include<wiringPi.h>
 #define green 0
 #define red 1
-#define switch 2
+#define bu 2
 void init()
 {
     wiringPiSetup();
     pinMode(green,OUTPUT);
     pinMode(red,OUTPUT);
-       pinMode(switch,INPUT);
+    pinMode(bu,INPUT);
 }
 void led(int signal)
 {
@@ -23,13 +23,17 @@ void led(int signal)
 void main(void)
 {
     init();
+    int i,j;
     while(1)
     {
-        switch(digitalRead(switch))
-        {
-            case 0:led(0);printf("挡\n");break;
-            case 1:led(1);printf("不挡\n");break;
-            default:printf("error");
-        }
+	if(digitalRead(bu)==1) 
+	{
+		led(0);
+	}
+	if(digitalRead(bu)==0) 
+	{
+		led(1);
+	}
+
     }
 }
