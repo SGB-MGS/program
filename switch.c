@@ -25,6 +25,10 @@ void led(int signal)
             digitalWrite(green,HIGH);
             digitalWrite(red,LOW);
         }
+        else
+        {
+            printf("error");
+        }
     }
 }
 
