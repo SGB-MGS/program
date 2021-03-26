@@ -1,3 +1,5 @@
+#define green 0
+#define red 1
 void led(int signal)
 {
     if(0==signal)
