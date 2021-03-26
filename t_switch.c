@@ -25,14 +25,6 @@ void main(void)
     init();
     while(1)
     {
-	if(digitalRead(bu)==1) 
-	{
-		led(0);
-	}
-	if(digitalRead(bu)==0) 
-	{
-		led(1);
-	}
-
+	led(digitalRead(bu));
     }
 }
